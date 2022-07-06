@@ -11,33 +11,14 @@ struct FriendCellView: View {
     var friend: Friend
     
     var body: some View {
-        HStack(spacing: 20) {
-            avatarView
+        HStack(spacing: 16) {
+            AvatarView(friend: friend, size: 38)
             
             friendDetails
             
             Spacer()
         }
-        .padding(20)
-    }
-    
-    private var avatarView: some View {
-        ZStack {
-            Circle()
-                .frame(width: 38, height: 38)
-                .foregroundColor(.avatarGrey)
-            
-            Group {
-                if let firstName = friend.firstName {
-                    Text(firstName.prefix(1))
-                }
-                if let lastName = friend.lastName {
-                    Text(lastName.prefix(1))
-                }
-            }
-            .font(.system(size: 14, weight: .bold))
-            .foregroundColor(.black)
-        }
+        .padding(16)
     }
     
     private var friendDetails: some View {
@@ -59,7 +40,7 @@ struct FriendCellView: View {
 
 struct FriendCellView_Previews: PreviewProvider {
     static var previews: some View {
-        FriendCellView(friend: Friend.testFriend)
+        FriendCellView(friend: .testFriend)
             .previewLayout(.sizeThatFits)
     }
 }

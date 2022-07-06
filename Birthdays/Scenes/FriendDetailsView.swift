@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct FriendDetailsView: View {
+    var friend: Friend
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        content
+            .navigationBarHidden(true)
+    }
+    
+    private var content: some View {
+        VStack {
+            
+        }
     }
 }
 
 struct FriendDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        FriendDetailsView()
+        FriendDetailsView(friend: .testFriend)
     }
 }

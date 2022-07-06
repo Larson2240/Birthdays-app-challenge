@@ -9,7 +9,7 @@ import Foundation
 
 extension Friend {
     static var testFriend: Friend {
-        let friend = Friend(entity: Friend.entity(), insertInto: nil)
+        let friend = Friend(context: PersistenceController.shared.context)
         friend.firstName = "FirstName"
         friend.lastName = "LastName"
         friend.birthDate = Date()

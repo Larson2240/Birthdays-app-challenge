@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A3B59922875E18900036674 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B59912875E18900036674 /* AvatarView.swift */; };
 		0A4137DD2875CCFF005FE5AD /* BirthdaysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4137DC2875CCFF005FE5AD /* BirthdaysApp.swift */; };
 		0A4137DF2875CCFF005FE5AD /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4137DE2875CCFF005FE5AD /* PersistenceController.swift */; };
 		0A4137E22875CCFF005FE5AD /* Birthdays.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0A4137E02875CCFF005FE5AD /* Birthdays.xcdatamodeld */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A3B59912875E18900036674 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		0A4137D92875CCFF005FE5AD /* Birthdays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Birthdays.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A4137DC2875CCFF005FE5AD /* BirthdaysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaysApp.swift; sourceTree = "<group>"; };
 		0A4137DE2875CCFF005FE5AD /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A3B59902875E17E00036674 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0A3B59912875E18900036674 /* AvatarView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		0A4137D02875CCFF005FE5AD = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +122,7 @@
 				0A41380C2875CFAC005FE5AD /* Config */,
 				0A41380E2875D024005FE5AD /* Controllers */,
 				0A6B15A92875D70F00574B9F /* Extensions */,
+				0A3B59902875E17E00036674 /* Helpers */,
 				0A41380D2875CFD4005FE5AD /* Scenes */,
 				0A41380F2875D031005FE5AD /* Resources */,
 				0A4137E82875CCFF005FE5AD /* Preview Content */,
@@ -323,6 +334,7 @@
 				0A6B15AB2875D75900574B9F /* DateFormatter + Extension.swift in Sources */,
 				0A4137DD2875CCFF005FE5AD /* BirthdaysApp.swift in Sources */,
 				0A6B15AD2875DA0A00574B9F /* FriendCellView.swift in Sources */,
+				0A3B59922875E18900036674 /* AvatarView.swift in Sources */,
 				0A6B15B12875DAA200574B9F /* Friend + Extension.swift in Sources */,
 				0A4137DF2875CCFF005FE5AD /* PersistenceController.swift in Sources */,
 				0A6B15B32875DC1000574B9F /* Color + Extension.swift in Sources */,
