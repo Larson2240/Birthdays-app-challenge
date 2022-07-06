@@ -40,7 +40,7 @@ struct FriendListView: View {
     private var friendsList: some View {
         List {
             ForEach(friends) { friend in
-                
+                FriendCellView(friend: friend)
             }
         }
     }

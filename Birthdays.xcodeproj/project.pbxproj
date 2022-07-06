@@ -20,6 +20,7 @@
 		0A6B15AD2875DA0A00574B9F /* FriendCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6B15AC2875DA0A00574B9F /* FriendCellView.swift */; };
 		0A6B15AF2875DA1800574B9F /* FriendDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6B15AE2875DA1800574B9F /* FriendDetailsView.swift */; };
 		0A6B15B12875DAA200574B9F /* Friend + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6B15B02875DAA200574B9F /* Friend + Extension.swift */; };
+		0A6B15B32875DC1000574B9F /* Color + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6B15B22875DC1000574B9F /* Color + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		0A6B15AC2875DA0A00574B9F /* FriendCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCellView.swift; sourceTree = "<group>"; };
 		0A6B15AE2875DA1800574B9F /* FriendDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailsView.swift; sourceTree = "<group>"; };
 		0A6B15B02875DAA200574B9F /* Friend + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Friend + Extension.swift"; sourceTree = "<group>"; };
+		0A6B15B22875DC1000574B9F /* Color + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 			children = (
 				0A6B15AA2875D75900574B9F /* DateFormatter + Extension.swift */,
 				0A6B15B02875DAA200574B9F /* Friend + Extension.swift */,
+				0A6B15B22875DC1000574B9F /* Color + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				0A6B15AD2875DA0A00574B9F /* FriendCellView.swift in Sources */,
 				0A6B15B12875DAA200574B9F /* Friend + Extension.swift in Sources */,
 				0A4137DF2875CCFF005FE5AD /* PersistenceController.swift in Sources */,
+				0A6B15B32875DC1000574B9F /* Color + Extension.swift in Sources */,
 				0A4137E42875CCFF005FE5AD /* FriendListView.swift in Sources */,
 				0A6B15AF2875DA1800574B9F /* FriendDetailsView.swift in Sources */,
 				0A4137E22875CCFF005FE5AD /* Birthdays.xcdatamodeld in Sources */,
