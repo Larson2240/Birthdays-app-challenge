@@ -5,13 +5,11 @@
 //  Created by Seraphim Kovalchuk on 06.07.2022.
 //
 
-import Foundation
 import Combine
 
 final class FriendListViewModel: ObservableObject {
-    @Published var chatListLoadingError: String = ""
+    @Published var loadingError = ""
     @Published var showAlert = false
-    @Published var isLoading = false
     
     private var cancellables: Set<AnyCancellable> = []
     var dataManager: ServiceProtocol
@@ -21,8 +19,6 @@ final class FriendListViewModel: ObservableObject {
     }
     
     func getFriendsList(completion: @escaping ([FriendModel]?) -> Void) {
-        isLoading = true
-        
         dataManager.fetchFriends()
             .sink { dataResponse in
                 if let error = dataResponse.error {
@@ -31,14 +27,12 @@ final class FriendListViewModel: ObservableObject {
                 } else if let results = dataResponse.value?.results {
                     completion(results)
                 }
-                
-                self.isLoading = false
             }
             .store(in: &cancellables)
     }
     
     func createAlert( with error: NetworkError ) {
-        chatListLoadingError = error.backendError == nil ? error.initialError.localizedDescription : error.backendError!.message
+        loadingError = error.backendError == nil ? error.initialError.localizedDescription : error.backendError!.message
         self.showAlert = true
     }
 }

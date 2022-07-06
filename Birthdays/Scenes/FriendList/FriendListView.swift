@@ -55,6 +55,9 @@ struct FriendListView: View {
                 friendsList
             }
         }
+        .alert(isPresented: $viewModel.showAlert) {
+            Alert(title: Text(viewModel.loadingError))
+        }
     }
     
     private var header: some View {
