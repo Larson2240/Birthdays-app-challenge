@@ -36,5 +36,5 @@ extension Color {
 
 extension Color {
     static let avatarGrey = Color(hex: "#E3E3E3")
-    static let dateGrey = Color(hex: "#8B8989")
+    static let lightGrey = Color(hex: "#8B8989")
 }

@@ -12,6 +12,7 @@ extension Friend {
         let friend = Friend(context: PersistenceController.shared.context)
         friend.firstName = "FirstName"
         friend.lastName = "LastName"
+        friend.age = 25
         friend.birthDate = Date()
         
         return friend

@@ -12,7 +12,7 @@ struct FriendCellView: View {
     
     var body: some View {
         HStack(spacing: 16) {
-            AvatarView(friend: friend, size: 38)
+            AvatarView(friend: friend, size: 38, fontSize: 14)
             
             friendDetails
             
@@ -32,7 +32,7 @@ struct FriendCellView: View {
             if let birthDate = friend.birthDate {
                 Text(DateFormatter.friendDateFormatter.string(from: birthDate))
                     .font(.system(size: 12))
-                    .foregroundColor(.dateGrey)
+                    .foregroundColor(.lightGrey)
             }
         }
     }

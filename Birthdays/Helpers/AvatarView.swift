@@ -10,6 +10,7 @@ import SwiftUI
 struct AvatarView: View {
     var friend: Friend
     var size: CGFloat
+    var fontSize: CGFloat
     
     var body: some View {
         ZStack {
@@ -25,7 +26,7 @@ struct AvatarView: View {
                     Text(lastName.prefix(1))
                 }
             }
-            .font(.system(size: 14, weight: .bold))
+            .font(.system(size: fontSize, weight: .bold))
             .foregroundColor(.black)
         }
         .frame(width: size, height: size)
@@ -35,6 +36,7 @@ struct AvatarView: View {
 struct AvatarView_Previews: PreviewProvider {
     static var previews: some View {
         AvatarView(friend: .testFriend,
-                   size: 50)
+                   size: 50,
+                   fontSize: 20)
     }
 }
