@@ -14,7 +14,7 @@ struct FriendListView: View {
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Friend.birthDate, ascending: true)],
         animation: .default)
-    private var items: FetchedResults<Friend>
+    private var friends: FetchedResults<Friend>
     
     var body: some View {
         content
@@ -23,7 +23,25 @@ struct FriendListView: View {
     
     private var content: some View {
         NavigationView {
-            
+            VStack(spacing: 0) {
+                header
+                
+                friendsList
+            }
+        }
+    }
+    
+    private var header: some View {
+        Text("Birthdays")
+            .font(.system(size: 16, weight: .bold))
+            .foregroundColor(.black)
+    }
+    
+    private var friendsList: some View {
+        List {
+            ForEach(friends) { friend in
+                
+            }
         }
     }
 }
