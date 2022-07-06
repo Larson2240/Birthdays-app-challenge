@@ -17,13 +17,15 @@ struct AvatarView: View {
             Circle()
                 .foregroundColor(.avatarGrey)
             
-            Group {
-                if let firstName = friend.firstName {
-                    Text(firstName.prefix(1))
-                }
-                
-                if let lastName = friend.lastName {
-                    Text(lastName.prefix(1))
+            HStack(spacing: 2) {
+                Group {
+                    if let firstName = friend.firstName {
+                        Text(firstName.prefix(1))
+                    }
+                    
+                    if let lastName = friend.lastName {
+                        Text(lastName.prefix(1))
+                    }
                 }
             }
             .font(.system(size: fontSize, weight: .bold))

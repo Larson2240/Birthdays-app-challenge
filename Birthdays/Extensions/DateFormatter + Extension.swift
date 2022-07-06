@@ -14,3 +14,17 @@ extension DateFormatter {
         return formatter
     }()
 }
+
+extension ISO8601DateFormatter {
+    static let iso801Formatter: ISO8601DateFormatter = {
+        let isoDateFormatter = ISO8601DateFormatter()
+        isoDateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+        isoDateFormatter.formatOptions = [
+            .withFullDate,
+            .withFullTime,
+            .withDashSeparatorInDate,
+            .withFractionalSeconds]
+        
+        return isoDateFormatter
+    }()
+}

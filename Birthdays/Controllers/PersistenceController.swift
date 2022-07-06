@@ -7,7 +7,7 @@
 
 import CoreData
 
-final class PersistenceController {
+final class PersistenceController: ObservableObject {
     static let shared = PersistenceController()
     
     private lazy var persistentContainer: NSPersistentContainer = {
@@ -40,5 +40,23 @@ final class PersistenceController {
     func removeObject<T: NSManagedObject>(_ object: T) {
         context.delete(object)
         save()
+    }
+    
+    func friendExists(firstName: String) -> Bool {
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Friend")
+        fetchRequest.predicate = NSPredicate(format: "firstName == %@", firstName)
+        fetchRequest.fetchLimit = 1
+        fetchRequest.includesSubentities = false
+        
+        var count = 0
+        
+        do {
+            count = try context.count(for: fetchRequest)
+        }
+        catch let error as NSError {
+            print("error executing fetch request: \(error)")
+        }
+        
+        return count > 0
     }
 }
