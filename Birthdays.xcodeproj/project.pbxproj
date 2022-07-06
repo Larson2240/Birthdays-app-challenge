@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0A4137DD2875CCFF005FE5AD /* BirthdaysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4137DC2875CCFF005FE5AD /* BirthdaysApp.swift */; };
-		0A4137DF2875CCFF005FE5AD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4137DE2875CCFF005FE5AD /* Persistence.swift */; };
+		0A4137DF2875CCFF005FE5AD /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4137DE2875CCFF005FE5AD /* PersistenceController.swift */; };
 		0A4137E22875CCFF005FE5AD /* Birthdays.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0A4137E02875CCFF005FE5AD /* Birthdays.xcdatamodeld */; };
-		0A4137E42875CCFF005FE5AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4137E32875CCFF005FE5AD /* ContentView.swift */; };
+		0A4137E42875CCFF005FE5AD /* FriendListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4137E32875CCFF005FE5AD /* FriendListView.swift */; };
 		0A4137E62875CCFF005FE5AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A4137E52875CCFF005FE5AD /* Assets.xcassets */; };
 		0A4137EA2875CCFF005FE5AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A4137E92875CCFF005FE5AD /* Preview Assets.xcassets */; };
 		0A4137F42875CD00005FE5AD /* BirthdaysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4137F32875CD00005FE5AD /* BirthdaysTests.swift */; };
 		0A4137FE2875CD00005FE5AD /* BirthdaysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4137FD2875CD00005FE5AD /* BirthdaysUITests.swift */; };
 		0A4138002875CD00005FE5AD /* BirthdaysUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4137FF2875CD00005FE5AD /* BirthdaysUITestsLaunchTests.swift */; };
+		0A6B15AB2875D75900574B9F /* DateFormatter + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6B15AA2875D75900574B9F /* DateFormatter + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +39,9 @@
 /* Begin PBXFileReference section */
 		0A4137D92875CCFF005FE5AD /* Birthdays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Birthdays.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A4137DC2875CCFF005FE5AD /* BirthdaysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaysApp.swift; sourceTree = "<group>"; };
-		0A4137DE2875CCFF005FE5AD /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		0A4137DE2875CCFF005FE5AD /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		0A4137E12875CCFF005FE5AD /* Birthdays.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Birthdays.xcdatamodel; sourceTree = "<group>"; };
-		0A4137E32875CCFF005FE5AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0A4137E32875CCFF005FE5AD /* FriendListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListView.swift; sourceTree = "<group>"; };
 		0A4137E52875CCFF005FE5AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A4137E72875CCFF005FE5AD /* Birthdays.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Birthdays.entitlements; sourceTree = "<group>"; };
 		0A4137E92875CCFF005FE5AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		0A4137F92875CD00005FE5AD /* BirthdaysUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BirthdaysUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A4137FD2875CD00005FE5AD /* BirthdaysUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaysUITests.swift; sourceTree = "<group>"; };
 		0A4137FF2875CD00005FE5AD /* BirthdaysUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaysUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0A6B15AA2875D75900574B9F /* DateFormatter + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +101,11 @@
 		0A4137DB2875CCFF005FE5AD /* Birthdays */ = {
 			isa = PBXGroup;
 			children = (
-				0A4137DC2875CCFF005FE5AD /* BirthdaysApp.swift */,
-				0A4137DE2875CCFF005FE5AD /* Persistence.swift */,
-				0A4137E32875CCFF005FE5AD /* ContentView.swift */,
-				0A4137E52875CCFF005FE5AD /* Assets.xcassets */,
-				0A4137E72875CCFF005FE5AD /* Birthdays.entitlements */,
-				0A4137E02875CCFF005FE5AD /* Birthdays.xcdatamodeld */,
+				0A41380C2875CFAC005FE5AD /* Config */,
+				0A41380E2875D024005FE5AD /* Controllers */,
+				0A6B15A92875D70F00574B9F /* Extensions */,
+				0A41380D2875CFD4005FE5AD /* Scenes */,
+				0A41380F2875D031005FE5AD /* Resources */,
 				0A4137E82875CCFF005FE5AD /* Preview Content */,
 			);
 			path = Birthdays;
@@ -133,6 +134,48 @@
 				0A4137FF2875CD00005FE5AD /* BirthdaysUITestsLaunchTests.swift */,
 			);
 			path = BirthdaysUITests;
+			sourceTree = "<group>";
+		};
+		0A41380C2875CFAC005FE5AD /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				0A4137DC2875CCFF005FE5AD /* BirthdaysApp.swift */,
+				0A4137E02875CCFF005FE5AD /* Birthdays.xcdatamodeld */,
+				0A4137E72875CCFF005FE5AD /* Birthdays.entitlements */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		0A41380D2875CFD4005FE5AD /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0A4137E32875CCFF005FE5AD /* FriendListView.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		0A41380E2875D024005FE5AD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0A4137DE2875CCFF005FE5AD /* PersistenceController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0A41380F2875D031005FE5AD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0A4137E52875CCFF005FE5AD /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0A6B15A92875D70F00574B9F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0A6B15AA2875D75900574B9F /* DateFormatter + Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,9 +308,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A6B15AB2875D75900574B9F /* DateFormatter + Extension.swift in Sources */,
 				0A4137DD2875CCFF005FE5AD /* BirthdaysApp.swift in Sources */,
-				0A4137DF2875CCFF005FE5AD /* Persistence.swift in Sources */,
-				0A4137E42875CCFF005FE5AD /* ContentView.swift in Sources */,
+				0A4137DF2875CCFF005FE5AD /* PersistenceController.swift in Sources */,
+				0A4137E42875CCFF005FE5AD /* FriendListView.swift in Sources */,
 				0A4137E22875CCFF005FE5AD /* Birthdays.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,7 +463,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Birthdays/Birthdays.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Birthdays/Config/Birthdays.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Birthdays/Preview Content\"";
@@ -436,8 +481,9 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.signalmyoligarch.Birthdays;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SeraphimKovalchuk.Birthdays;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -451,7 +497,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Birthdays/Birthdays.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Birthdays/Config/Birthdays.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Birthdays/Preview Content\"";
@@ -468,8 +515,9 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.signalmyoligarch.Birthdays;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SeraphimKovalchuk.Birthdays;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
