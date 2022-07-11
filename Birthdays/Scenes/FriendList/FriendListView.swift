@@ -21,29 +21,8 @@ struct FriendListView: View {
     
     var body: some View {
         content
-            .navigationBarHidden(true)
             .onAppear {
-                viewModel.getFriendsList { results in
-                    guard let results = results else { return }
-                    
-                    for result in results {
-                        guard !persistenceController.friendExists(firstName: result.name.firstName) else {
-                            continue
-                        }
-                        
-                        let newObject = Friend(context: viewContext)
-                        
-                        newObject.firstName = result.name.firstName
-                        newObject.lastName = result.name.lastName
-                        newObject.age = Int16(result.additionalInfo.age)
-                        
-                        if let date = ISO8601DateFormatter.iso801Formatter.date(from: result.additionalInfo.date) {
-                            newObject.birthDate = date
-                        }
-                    }
-                    
-                    persistenceController.save()
-                }
+                configureFriendsList()
             }
     }
     
@@ -54,6 +33,7 @@ struct FriendListView: View {
                 
                 friendsList
             }
+            .navigationBarHidden(true)
         }
         .alert(isPresented: $viewModel.showAlert) {
             Alert(title: Text(viewModel.loadingError))
@@ -75,6 +55,30 @@ struct FriendListView: View {
             }
         }
         .listStyle(.plain)
+    }
+    
+    private func configureFriendsList() {
+        viewModel.getFriendsList { results in
+            guard let results = results else { return }
+            
+            for result in results {
+                guard !persistenceController.friendExists(firstName: result.name.firstName) else {
+                    continue
+                }
+                
+                let newObject = Friend(context: viewContext)
+                
+                newObject.firstName = result.name.firstName
+                newObject.lastName = result.name.lastName
+                newObject.age = Int16(result.additionalInfo.age)
+                
+                if let date = ISO8601DateFormatter.iso801Formatter.date(from: result.additionalInfo.date) {
+                    newObject.birthDate = date
+                }
+            }
+            
+            persistenceController.save()
+        }
     }
 }
 

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FriendDetailsView: View {
-    @Environment(\.dismiss) private var dismiss
+    @Environment(\.presentationMode) private var presentationMode
     
     var friend: Friend
     
@@ -46,7 +46,7 @@ struct FriendDetailsView: View {
     }
     
     private var backButton: some View {
-        Button(action: { dismiss() }) {
+        Button(action: { presentationMode.wrappedValue.dismiss() }) {
             ZStack {
                 RoundedRectangle(cornerRadius: 6)
                     .foregroundColor(.black)
